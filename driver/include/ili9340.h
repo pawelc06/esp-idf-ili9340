@@ -13,6 +13,8 @@
 #define YELLOW			0xFFE0
 #define CYAN			0x07FF
 #define PURPLE			0xF81F
+#define ORANGE          0xFC60
+#define BROWN           0x9260
 
 
 #define DIRECTION0		0
