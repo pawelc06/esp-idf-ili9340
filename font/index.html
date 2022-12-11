@@ -1,6 +1,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
         h1 {text-align: center;}
         p {text-align: center;}
@@ -8,47 +9,44 @@
         </style>
     </head>
 <body>
-<h3>Alarm set</h3>
+<h3>Ustawienia alarmów</h3>
 <form action="/index.html" method="post">
     <table>
         <tr>
             <td><label for="monTime">Poniedziałek</label></td>
-            <td><input type="checkbox" name="monEnabled" checked> <input type="time" name="monTime" value="07:00"></td>
+            <td><input type="checkbox" name="monEnabled" MOND_EN> <input type="time" name="monTime" value="MO_TM"></td>
         </tr>
 
         <tr>
             <td><label for="tueTime">Wtorek</label></td>
-            <td><input type="checkbox" name="tueEnabled" checked> <input type="time" name="tueTime" value="07:00"></td>
+            <td><input type="checkbox" name="tueEnabled" TUES_EN> <input type="time" name="tueTime" value="TU_TM"></td>
         </tr>
 
         <tr>
             <td><label for="wedTime">Środa</label></td>
-            <td><input type="checkbox" name="wedEnabled" checked> <input type="time" name="wedTime" value="07:00"></td>
+            <td><input type="checkbox" name="wedEnabled" WEDN_EN> <input type="time" name="wedTime" value="WE_TM"></td>
         </tr>
 
         <tr>
             <td><label for="thuTime">Czwartek</label></td>
-            <td><input type="checkbox" name="thuEnabled" checked> <input type="time" name="thuTime" value="07:00"></td>
+            <td><input type="checkbox" name="thuEnabled" THUR_EN> <input type="time" name="thuTime" value="TH_TM"></td>
         </tr>
 
         <tr>
             <td><label for="friTime">Piątek</label></td>
-            <td><input type="checkbox" name="friEnabled" checked> <input type="time" name="friTime" value="07:00"></td>
+            <td><input type="checkbox" name="friEnabled" FRID_EN> <input type="time" name="friTime" value="FR_TM"></td>
         </tr>
 
         <tr>
             <td><label for="satTime">Sobota</label></td>
-            <td><input type="checkbox" name="tueEnabled"> <input type="time" name="satTime" value="07:00"></td>
+            <td><input type="checkbox" name="satEnabled" SATU_EN> <input type="time" name="satTime" value="SA_TM"></td>
         </tr>
 
         <tr>
             <td><label for="sunTime">Niedziela</label></td>
-            <td><input type="checkbox" name="sunEnabled"> <input type="time" name="sunTime" value="07:00"></td>
+            <td><input type="checkbox" name="sunEnabled" SUND_EN> <input type="time" name="sunTime" value="SU_TM"></td>
         </tr>
-        <tr><td colspan="2" style="text-align:center"><input type="submit" value="Submit"></td></tr>
+        <tr><td colspan="2" style="text-align:center"><input type="submit" value="Zapisz"></td></tr>
     </table>
-          
-    
   </form>
-
 </html>
