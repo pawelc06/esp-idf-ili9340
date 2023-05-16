@@ -1,3 +1,4 @@
+#include <stdbool.h>
 #ifndef MAIN_FONTX_H_
 #define MAIN_FONTX_H_
 #define FontxGlyphBufSize (32*32/8)
