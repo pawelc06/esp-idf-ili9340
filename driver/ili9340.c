@@ -27,7 +27,7 @@
 static const int SPI_Command_Mode = 0;
 static const int SPI_Data_Mode = 1;
 //static const int SPI_Frequency = SPI_MASTER_FREQ_20M;
-////static const int SPI_Frequency = SPI_MASTER_FREQ_26M;
+//static const int SPI_Frequency = SPI_MASTER_FREQ_26M;
 static const int SPI_Frequency = SPI_MASTER_FREQ_40M;
 ////static const int SPI_Frequency = SPI_MASTER_FREQ_80M;
 
@@ -37,18 +37,18 @@ void spi_master_init(TFT_t * dev, int16_t GPIO_MOSI, int16_t GPIO_SCLK, int16_t 
 	esp_err_t ret;
 
 	ESP_LOGI(TAG, "GPIO_CS=%d",GPIO_CS);
-	gpio_pad_select_gpio( GPIO_CS );
+	esp_rom_gpio_pad_select_gpio( GPIO_CS );
 	gpio_set_direction( GPIO_CS, GPIO_MODE_OUTPUT );
 	gpio_set_level( GPIO_CS, 0 );
 
 	ESP_LOGI(TAG, "GPIO_DC=%d",GPIO_DC);
-	gpio_pad_select_gpio( GPIO_DC );
+	esp_rom_gpio_pad_select_gpio( GPIO_DC );
 	gpio_set_direction( GPIO_DC, GPIO_MODE_OUTPUT );
 	gpio_set_level( GPIO_DC, 0 );
 
 	ESP_LOGI(TAG, "GPIO_RESET=%d",GPIO_RESET);
 	if ( GPIO_RESET >= 0 ) {
-		gpio_pad_select_gpio( GPIO_RESET );
+		esp_rom_gpio_pad_select_gpio( GPIO_RESET );
 		gpio_set_direction( GPIO_RESET, GPIO_MODE_OUTPUT );
 		gpio_set_level( GPIO_RESET, 0 );
 		vTaskDelay( pdMS_TO_TICKS( 100 ) );
@@ -57,7 +57,7 @@ void spi_master_init(TFT_t * dev, int16_t GPIO_MOSI, int16_t GPIO_SCLK, int16_t 
 
 	ESP_LOGI(TAG, "GPIO_BL=%d",GPIO_BL);
 	if ( GPIO_BL >= 0 ) {
-		gpio_pad_select_gpio( GPIO_BL );
+		esp_rom_gpio_pad_select_gpio( GPIO_BL );
 		gpio_set_direction( GPIO_BL, GPIO_MODE_OUTPUT );
 		gpio_set_level( GPIO_BL, 0 );
 	}
